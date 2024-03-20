@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aarav Patel's Portfolio</title>
     <link rel="icon" href="/assets/favicon-d5a37a5e.ico" type="image/x-icon">
-    <script type="module" crossorigin src="/assets/index-b55d094d.js"></script>
-    <link rel="stylesheet" href="/assets/index-cd86f773.css">
+    <script type="module" crossorigin src="/assets/index-9dd6148e.js"></script>
+    <link rel="stylesheet" href="/assets/index-253befe8.css">
   </head>
   <body>
 <div class='grid'>
@@ -43,15 +43,81 @@
        <div class='p1 slide'>
 
 
-         <div class='p1t'>
+         <div class='p1t slide-text'>
            In this project I used HTML, CSS, and Javascript to create a portfolio to display my work. 
          </div>
        </div>
       <div class='p2 slide'>
-        
-         <div class='p2t'>In the Binary Search project my team created a website that could guess the NBA team the user was thinking of in 5 guess or less.This project was done with pair programing with three people. Also in this project we put in different inputs for every output to try to guess the team.<a href='https://binary-search-game-group-project-iacs-apcsp-23-24.iacs-apcsp-23-24.repl.co/' target='_blank' >Click Here To Play</a></div>
+        <a href='https://binary-search-apcsp.netlify.app/'  target='_blank'>
+         <div class='p2t  slide-text'><p>In the Binary Search project my team created a website that could guess the NBA team the user was thinking of in 5 guess or less.This project was done with pair programing with three people. Also in this project we put in different inputs for every output to try to guess the team.</p></div>
+      </a>
+        </div>
+      <div class='p3 slide'>
+        <a href='https://hangman-aarav-patel.netlify.app/'  target='_blank'>
+        <div class='p3t  slide-text'>
+          <p>The game I made was a hangman game. The way it works is that there is an on-screen keyboard. After the user types a letter in, they have to press guess. Once they press guess one of 2 things happens. Either it is not one of the letters in the word and gets filtered out, or it is in the word and appears at the top. Each time a wrong guess is made, the image of the hangman gets one more body part until it reaches 6. This is when the user loses and there is a try again button that resets the state of all the functions. When the user guesses all the letters in the word then there is a similar try again button that resists the state of the functions. </p>
+          <pre><code lang="typescript" id="mash-ex-1"></code></pre>
+          <p>This code shows that the state of gameWon is false. But when the function OnGameWon is activated then GameWon is set to true. </p>
+          <pre><code lang="typescript" id="mash-ex-2"></code></pre>
+          <p>That shows what onGameWon does. This part is using the every method on the letters array. The every method tests whether all elements in the array pass the test by the function. Then it returns true if the letters are guessed and false if they are not. Then when setGameWon is true the following occurs. </p>
+          <pre><code lang="typescript" id="mash-ex-3"></code></pre>
+          <p>This tells it that when gameWon is activated, then these things appear. I designed it to place a start-over button and to congratulate the user. The start-over button then resets all the states to their original state so the user can play again. </p>
+          <pre><code lang="typescript" id="mash-ex-4"></code></pre>
+          <p>The start-over button gets a new random word, sets game over and game won to false, sets the guesses back to 0, and enables the on-screen keyboard. The keyboard is disabled when the game won is activated so the user can no longer make guesses. 
 
-      </div>
+            An example of a callback function is the on-screen keyboard. The callbacks on this function are onGuess and Onchange. 
+            </p>
+            <pre><code lang="typescript" id="mash-ex-5"></code></pre>
+            <p>The way onChange works is that it uses useEffect so every time the text changes, onChange is called.</p>
+            <pre><code lang="typescript" id="mash-ex-6"></code></pre>
+            <p>Then the way on guesswork works is that every time the user presses the guess button, a guess is added. </p>
+            <pre><code lang="typescript" id="mash-ex-7"></code></pre>
+            <p>This code shows that the guess button can only be clicked if 6 letters or 1 letter are in the text box. It also resets the state of text emptying the text box so the user can guess again. Both callbacks are called back when </p>
+            <pre><code lang="typescript" id="mash-ex-8"></code></pre>
+            <p>is used. This leads the callbacks to the next functions. The keyboard also represents a list. There are 3 rows to a keyboard and each has its own letters. I put the letters in each row into an array called either top middle or bottom depending on what row they are in and in order.</p>
+            <pre><code lang="typescript" id="mash-ex-9"></code></pre>
+            <p>Then I called on the arrays by writing</p>
+            <pre><code lang="typescript" id="mash-ex-10"></code></pre>
+            <p>An example of a string is every word inside of const words. </p>
+            <pre><code lang="typescript" id="mash-ex-11"></code></pre>
+            <p>Const words is an array and every word inside is a string. 
+              An example of a procedure would be const getRandomWord. </p>
+              <pre><code lang="typescript" id="mash-ex-12"></code></pre>
+              <p>This procedure looks at the words in const words and picks out a random word.
+                This code is also an example of an iteration in a way. It looks through all words and repeats the actions of looking for a word until a word is found and then it stops. 
+                In the code 
+                </p>
+                <pre><code lang="typescript" id="mash-ex-13"></code></pre>
+                <p>There are several variables and each is assigned to its own state. For example, the variable guesses are set to 0 because there is nothing inside the brackets. The qwertyDisabled is assigned as false which means the Qwerty is still active. 
+                  With fixing errors in this code, I would say the biggest problem was not knowing how to write what I wanted. I understood the way tsx worked and I knew the steps that it would take to do something but I often did not know where to write certain things and when to put arrows and parentheses. 
+                  </p>
+              </div>
+            </a>
+            </div>
+              <div class='p4 slide'>
+                <a href='https://aarav-patel-image-filters.netlify.app/'  target='_blank'>
+                <div class='p4t  slide-text'>
+                 <p>The custom filter I chose to make was an edge filter. This filter works by looking at the pixels at the top, bottom, right, and left. It looks at these pixels and if there is a great enough color difference between them, it detects an edge so the pixel becomes a black pixel to create an edge.  </p>
+                 <pre><code lang="typescript" id="mash-ex-14"></code></pre>
+                 <p>  This code shows that if any of the pixels on the top, bottom, left, and right are greater than the colorThreshold, the pixel will become black because it sets the red, blue, and green values all to 0 which gives you black.</p>
+                </div>
+              </a>
+              </div>
+              <div class='p5 slide'>
+                <a href='https://deer-crash-data.netlify.app/'  target='_blank'>
+                <div class='p5t  slide-text'>
+                 <p>I played several different roles in my group. I helped sort the data by going through the list and determining which categories fit under which weather conditions. I helped find bugs and fix problems in the code. I also gave ideas on how to set up the model and help execute those ideas. The purpose of the bar graph is to help viewers understand which weather conditions put drivers at the most risk of hitting a deer. The purpose of the line graph is to see what time of the day you are at the most risk for a deer crash. The way the bar graph works is simple. There are four categories; rainy, snowy, clear, and foggy. Each category has subcategories that are written in the csv. For example, for clear days there are subcategories like   "Clear", "Clear/Clear", and "Clear/Other". These all mean clearly but they are reported differently so the subcategories have to be filtered and go into one of the four categories. Then it counts each of the subcategories and adds one to the main category for each one. After that, each category is divided by a number that shows how many of those days there have been in the past 7 years. In the end, it displays the number of deer crashes per day during the weather conditions. The line graph works differently. We sorted the data out through military time. If it was 12 AM then it would be 0. If it has a PM at the end of it then it would add 12 to the number. Then it looks through the csv by filtering it like so. One example of a list in my code is this.  </p>
+                 <pre><code lang="typescript" id="mash-ex-15"></code></pre>
+                  <p> This list shows all the subcategories that go into the main category of clear days. Another list in the code is</p>
+                 <pre><code lang="typescript" id="mash-ex-16"></code></pre>
+                  <p> This list tells it to look through the weather conditions and then read through the list already created and if the subcategory is counted, it adds one to the bar data for that category. An example would be if it said “Clear/Clear” It would read this and since it is in the clear list it would add one to the clear data. It repeats this process until all of the subcategories are counted. An example of an algorithm in this code would be the filter of the time. If the time was 12 AM the code would set it equal to 0. </p>
+                 <pre><code lang="typescript" id="mash-ex-17"></code></pre>
+                 <p> It knew this by looking at the hour and the ampm parts. For the PM it would look through the data like this and add 12 if there was a PM in the ampm part. The way it is split is if it is before the colon it is the hour. If it is directly after the colon it is the minutes. If it is a space after the colon it is ampm. Information we extracted from the data set was the weather conditions and the crash times. Potential biases that may exist in our data may be when the weather is reported as, “Snowy/ Clear” We categorized this as snowy but it could go both ways. This happens multiple times when we must decide between two categories for one subcategory. The conclusion you can draw from my line data is that the most common deer crash time is 5 PM and the least common deer crash time is 2 PM. Conclusions you cannot make from the line data is when you are at the most risk of a deer crash. The data doesn’t account for the number of drivers on the road at the time so it does not show risk. Conclusions you make from the bar data is the weather conditions put you at the most risk for a deer crash. You cannot conclude the total number of deer crashes during certain weather conditions in the bar data. </p>
+                </div>
+              </a>
+              </div>
+ 
+     
     </div>
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095; </a>
@@ -63,7 +129,7 @@
 
   
      
-      
+
       
       
   </body>

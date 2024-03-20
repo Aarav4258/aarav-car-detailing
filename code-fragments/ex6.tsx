@@ -1,1 +1,0 @@
-useEffect(()=>onChange(text),[text])
